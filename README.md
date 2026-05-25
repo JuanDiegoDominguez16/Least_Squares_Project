@@ -30,29 +30,29 @@ The classifier assigns each vehicle to one of two classes:
 # Mathematical Formulation
 
 Given a design matrix:
-$
-[
+$$
+
 X \in \mathbb{R}^{m \times n}
-]
-$
+
+$$
 
 and a label vector:
 
-[
+$$
 y \in {-1,1}^m
-]
+$$
 
 we seek a parameter vector:
 
-[
+$$
 \beta
-]
+$$
 
 that minimizes the squared error:
 
-[
+$$
 \min_{\beta} ||X\beta - y||^2
-]
+$$
 
 The solution is obtained through the normal equations:
 
