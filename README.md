@@ -31,9 +31,7 @@ The classifier assigns each vehicle to one of two classes:
 
 Given a design matrix:
 $$
-
 X \in \mathbb{R}^{m \times n}
-
 $$
 
 and a label vector:
@@ -56,9 +54,9 @@ $$
 
 The solution is obtained through the normal equations:
 
-[
+$$
 X^TX\beta = X^Ty
-]
+$$
 
 and solved numerically using:
 
@@ -74,15 +72,15 @@ instead of explicitly computing the matrix inverse.
 
 To improve numerical stability and reduce overfitting, the project also implements Ridge regression:
 
-[
+$$
 \min_{\beta} ||X\beta - y||^2 + \lambda ||\beta||^2
-]
+$$
 
 which leads to the regularized system:
 
-[
+$$
 (X^TX + \lambda I)\beta = X^Ty
-]
+$$
 
 This reduces coefficient magnitude and improves generalization.
 
@@ -146,9 +144,9 @@ The pipeline consists of:
 
 All variables are standardized before training:
 
-[
+$$
 z = \frac{x-\mu}{\sigma}
-]
+$$
 
 This prevents variables with larger magnitudes from dominating the optimization process.
 
@@ -160,21 +158,21 @@ One of the key theoretical ideas of the project is the geometric interpretation 
 
 The prediction vector:
 
-[
+$$
 X\hat{\beta}
-]
+$$
 
 is the orthogonal projection of the label vector:
 
-[
+$$
 y
-]
+$$
 
 onto the column space of the design matrix:
 
-[
+$$
 Col(X)
-]
+$$
 
 This interpretation connects machine learning classification with fundamental concepts from linear algebra.
 
