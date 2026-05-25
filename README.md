@@ -30,10 +30,11 @@ The classifier assigns each vehicle to one of two classes:
 # Mathematical Formulation
 
 Given a design matrix:
-
+$
 [
 X \in \mathbb{R}^{m \times n}
 ]
+$
 
 and a label vector:
 
